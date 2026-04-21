@@ -5,7 +5,7 @@ export default function Herosection() {
   const { t } = useTranslation();
 
   return (
-    <div className="relative bg-[#ff914d] text-white py-20 overflow-hidden">
+    <div className="relative bg-[#ff914d] text-zinc-300 py-20 overflow-hidden">
       <video
         src="/src/assets/hero-video.mp4"
         autoPlay

@@ -43,7 +43,7 @@ export default function NavBar() {
 
       </div>
 
-      <div className="flex items-center justify-between mx-auto container  z-50">
+      <div className="flex items-center justify-between mx-auto container z-50">
         <img src="/src/assets/MAVNT.png" alt="Logo" className="w-36" />
         {/* for large screens */}
         <ul className="md:flex gap-6 hidden">
