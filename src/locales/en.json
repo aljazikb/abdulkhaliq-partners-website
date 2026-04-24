@@ -5,5 +5,9 @@
   "portfolio": "Portfolio",
   "contact": "Contact",
   "heroTitle": "We create. You grow.",
-  "heroSubtitle": "Photo, video editing, and social media content for modern brands"    
+  "heroSubtitle": "Photo, video editing, and social media content for modern brands",
+  "heroButton": "Get Started",
+  "aboutSubtitle": "We are a creative agency specializing in photography, marketing, and content writing. We help you showcase your identity and build a strong and distinctive presence. We offer innovative solutions that combine quality and impact to deliver your message to your audience in the best way possible.",
+  "servicesDescription": "Everything you need to bring your vision to life"
+
 }

@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
-
+import { motion, useScroll, useTransform } from "motion/react";
 
 export default function Herosection() {
   const { t } = useTranslation();
+  const { scrollYProgress } = useScroll();
+  const filter = useTransform(scrollYProgress, [0, 1], ["blur(0px)", "blur(10px)"]);
 
   return (
-    <div className="relative bg-[#ff914d] text-zinc-300 py-20 overflow-hidden">
+    <motion.div style={{ filter }} className="relative bg-[#ff914d] text-zinc-300 py-20 overflow-hidden">
       <video
         src="/src/assets/hero-video.mp4"
         autoPlay
@@ -25,9 +27,9 @@ export default function Herosection() {
           href="#"
           className="bg-white text-[#004aad] px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition duration-300"
         >
-          Get Started
+         {t("heroButton")}
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }

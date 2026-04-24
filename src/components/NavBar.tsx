@@ -5,6 +5,7 @@ import { useTranslation } from "react-i18next";
 import { FaGlobe } from "react-icons/fa";
 import i18n from "../i18n";
 
+
 const styles = {
   link: "text-white hover:text-blue-300 transition-colors duration-700",
   smallLink: "block w-full py-3 text-white hover:bg-white/10 transition"
@@ -48,13 +49,13 @@ export default function NavBar() {
         {/* for large screens */}
         <ul className="md:flex gap-6 hidden">
           <li>
-            <a href="#" className={styles.link}>{t("home")}</a>
+            <a href="#home" className={styles.link}>{t("home")}</a>
           </li>
           <li >
-            <a href="#" className={styles.link}>{t("about")}</a>
+            <a href="#about" className={styles.link}>{t("about")}</a>
           </li>
           <li>
-            <a href="#" className={styles.link}>{t("services")}</a>
+            <a href="#services" className={styles.link}>{t("services")}</a>
           </li>
           <li >
             <a href="#" className={styles.link}>{t("portfolio")}</a>
