@@ -24,12 +24,12 @@ function ServiceCard({
       viewport={{ once: true, margin: "-60px" }}
       transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
       whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-      className={`bg-white rounded-2xl shadow-sm border-l-4 ${service.color} p-6 flex items-start gap-5 cursor-default min-h-[300px]`}
+      className={`bg-white rounded-2xl shadow-sm border-l-4 ${service.color} p-6 flex flex-col items-center justify-center gap-4 cursor-default min-h-[300px]`}
     >
       <div className={`text-3xl w-12 h-12 flex items-center justify-center rounded-xl ${service.accent} flex-shrink-0`}>
         {service.icon}
       </div>
-      <div>
+      <div className="text-center">
         <h3 className="text-lg font-semibold text-gray-800 mb-1">{service.title}</h3>
         <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
       </div>

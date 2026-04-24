@@ -8,6 +8,24 @@
   "heroSubtitle": "Photo, video editing, and social media content for modern brands",
   "heroButton": "Get Started",
   "aboutSubtitle": "We are a creative agency specializing in photography, marketing, and content writing. We help you showcase your identity and build a strong and distinctive presence. We offer innovative solutions that combine quality and impact to deliver your message to your audience in the best way possible.",
-  "servicesDescription": "Everything you need to bring your vision to life"
+  "servicesDescription": "Everything you need to bring your vision to life",
+
+  "webDevelopmentTitle": "Digital Marketing",
+  "webDevelopmentDescription": "Helping your brand reach the right audience and grow its online presence effectively.",
+
+  "uiUxDesignTitle": "Creative Design",
+  "uiUxDesignDescription": "Designing engaging visual content and social media posts that reflect your brand identity.",
+
+  "mobileAppsTitle": "Professional Photography",
+  "mobileAppsDescription": "High-quality photography for products, events, and marketing content.",
+
+  "cloudSolutionsTitle": "Video Editing & Production",
+  "cloudSolutionsDescription": "Professional video editing and visual content creation to attract and engage customers.",
+
+  "seoMarketingTitle": "Advertising Campaigns",
+  "seoMarketingDescription": "Managing paid advertising campaigns across social media platforms to increase reach and sales.",
+
+  "aiIntegrationTitle": "Content Strategy",
+  "aiIntegrationDescription": "Planning and creating creative content strategies to grow your brand effectively."
 
 }

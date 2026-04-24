@@ -12,21 +12,21 @@
   "aboutSubtitle": "شركة متخصصة في التصوير، التسويق، وكتابة المحتوى، نساعدك على إبراز هويتك وبناء حضور قوي ومميز. نقدّم حلولاً إبداعية تجمع بين الجودة والتأثير لنصل برسالتك إلى جمهورك بالشكل الأمثل",
   "servicesDescription": "كل ما تحتاجه لتحقيق رؤيتك",
 
-  "webDevelopmentTitle": "تطوير الويب",
-  "webDevelopmentDescription": "بناء تطبيقات ويب سريعة وقابلة للتطوير وحديثة مصممة لتلبية احتياجاتك.",
+   "webDevelopmentTitle": "التسويق الرقمي",
+  "webDevelopmentDescription": "نساعدك في الوصول لجمهورك المستهدف وزيادة انتشار علامتك التجارية عبر الإنترنت.",
 
-  "uiUxDesignTitle": "تصميم UI/UX",
-  "uiUxDesignDescription": "تصميم واجهات بديهية وتجارب مستخدم ممتعة تحقق نتائج.",
+  "uiUxDesignTitle": "التصميم الإبداعي",
+  "uiUxDesignDescription": "تصميم بوستات ومحتوى بصري جذاب يعكس هوية مشروعك بشكل احترافي.",
 
-  "mobileAppsTitle": "تطبيقات الجوال",
-  "mobileAppsDescription": "تطبيقات جوال متعددة المنصات لنظامي iOS وAndroid.",
+  "mobileAppsTitle": "التصوير الاحترافي",
+  "mobileAppsDescription": "تصوير منتجات وفعاليات بجودة عالية تناسب الإعلانات والسوشيال ميديا.",
 
-  "cloudSolutionsTitle": "الحلول السحابية",
-  "cloudSolutionsDescription": "بنية تحتية سحابية قابلة للتطوير وأنابيب DevOps لدعم منتجك.",
+  "cloudSolutionsTitle": "المونتاج وصناعة الفيديو",
+  "cloudSolutionsDescription": "مونتاج فيديوهات احترافية وصناعة محتوى مرئي يجذب العملاء.",
 
-  "seoMarketingTitle": "تحسين محركات البحث والتسويق",
-  "seoMarketingDescription": "استراتيجيات مبنية على البيانات تعزز ظهورك وتحقق نتائج حقيقية.",
+  "seoMarketingTitle": "الحملات الإعلانية",
+  "seoMarketingDescription": "إدارة إعلانات ممولة على منصات التواصل لزيادة العملاء والمبيعات.",
 
-  "aiIntegrationTitle": "دمج الذكاء الاصطناعي",
-  "aiIntegrationDescription": "دمج الأتمتة الذكية وميزات الذكاء الاصطناعي مباشرة في منتجك."
+  "aiIntegrationTitle": "استراتيجية المحتوى",
+  "aiIntegrationDescription": "تخطيط وتنفيذ محتوى إبداعي يساعد في نمو العلامة التجارية."
 }
