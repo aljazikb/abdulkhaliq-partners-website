@@ -28,5 +28,22 @@
   "seoMarketingDescription": "إدارة إعلانات ممولة على منصات التواصل لزيادة العملاء والمبيعات.",
 
   "aiIntegrationTitle": "استراتيجية المحتوى",
-  "aiIntegrationDescription": "تخطيط وتنفيذ محتوى إبداعي يساعد في نمو العلامة التجارية."
+  "aiIntegrationDescription": "تخطيط وتنفيذ محتوى إبداعي يساعد في نمو العلامة التجارية.",
+
+
+ "portfolioDescription": "أعمالنا تتحدث عن نفسها",
+"all": "الكل",
+"photos": "تصوير",
+"videos": "مونتاج",
+"socialMedia": "سوشيال ميديا",
+"designs": "تصاميم",
+"project1Title": "مشروع تصوير ١",
+"project2Title": "مشروع فيديو ١",
+"project3Title": "مشروع سوشيال ١",
+"project4Title": "مشروع تصميم ١",
+"project5Title": "مشروع تصوير ٢",
+"project6Title": "مشروع فيديو ٢",
+"project7Title": "مشروع سوشيال ٢",
+"project8Title": "مشروع تصميم ٢",
+"project9Title": "مشروع تصوير ٣"
 }

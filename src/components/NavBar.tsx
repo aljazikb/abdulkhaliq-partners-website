@@ -57,10 +57,10 @@ export default function NavBar() {
             <a href="#services" className={styles.link}>{t("services")}</a>
           </li>
           <li >
-            <a href="#" className={styles.link}>{t("portfolio")}</a>
+            <a href="#portfolio" className={styles.link}>{t("portfolio")}</a>
           </li>
           <li >
-            <a href="#" className={styles.link}>{t("contact")}</a>
+            <a href="#contact" className={styles.link}>{t("contact")}</a>
           </li>
 
           {/*  ----------------------------------------------    */}
@@ -111,10 +111,10 @@ export default function NavBar() {
           <a href="#services" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("services")}</a>
         </li>
         <li>
-          <a href="#" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("portfolio")}</a>
+          <a href="#portfolio" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("portfolio")}</a>
         </li>
         <li>
-          <a href="#" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("contact")}</a>
+          <a href="#contact" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("contact")}</a>
         </li>
         {/*  ----------------------------------------------    */}
         <li className="relative">
