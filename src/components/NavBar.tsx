@@ -7,6 +7,8 @@ import i18n from "../i18n";
 import logo from "../assets/MAVNT.png";
 
 
+
+
 const styles = {
   link: "text-white hover:text-blue-300 transition-colors duration-700",
   smallLink: "block w-full py-3 text-white hover:bg-white/10 transition"
@@ -39,11 +41,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-[#004aad] text-white p-4 relative z-50">
-      <div className="flex items-center gap-2">
-
-
-      </div>
+    <nav className="bg-[#004aad]  text-white p-4 relative z-50">
 
       <div className="flex items-center justify-between mx-auto container z-50">
         <img src={logo} alt="Logo" className="w-36" />
@@ -94,31 +92,29 @@ export default function NavBar() {
         </ul>
 
         {/* hamburger menu for small screens */}
-        <div className="cursor-pointer md:hidden" >
-          {isOpen ? <RiCloseLargeFill size={23} onClick={toggleMenu} /> :
-            <GiHamburgerMenu size={23} onClick={toggleMenu} />}
-
+        <div className="cursor-pointer md:hidden z-50" onClick={toggleMenu}>
+          {isOpen ? <RiCloseLargeFill size={23} /> : <GiHamburgerMenu size={23} />}
         </div>
       </div>
 
 
 
       {/* for small screens */}
-      {isOpen && (<ul className="flex flex-col mt-4 text-center md:hidden">
+      {isOpen && (<ul className="flex flex-col mt-4 text-center md:hidden ">
         <li>
-          <a href="#" className={`${styles.smallLink} block`}> {t("home")}</a>
+          <a href="#home" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("home")}</a>
         </li>
         <li>
-          <a href="#" className={`${styles.smallLink} block`}> {t("about")}</a>
+          <a href="#about" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("about")}</a>
         </li>
         <li>
-          <a href="#" className={`${styles.smallLink} block`}> {t("services")}</a>
+          <a href="#services" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("services")}</a>
         </li>
         <li>
-          <a href="#" className={`${styles.smallLink} block`}> {t("portfolio")}</a>
+          <a href="#" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("portfolio")}</a>
         </li>
         <li>
-          <a href="#" className={`${styles.smallLink} block`}> {t("contact")}</a>
+          <a href="#" onClick={toggleMenu} className={`${styles.smallLink} block`}> {t("contact")}</a>
         </li>
         {/*  ----------------------------------------------    */}
         <li className="relative">
