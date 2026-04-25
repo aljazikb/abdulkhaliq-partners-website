@@ -4,6 +4,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { FaGlobe } from "react-icons/fa";
 import i18n from "../i18n";
+import logo from "../assets/MAVNT.png";
 
 
 const styles = {
@@ -38,14 +39,14 @@ export default function NavBar() {
   };
 
   return (
-    <nav className=" bg-[#004aad] text-white p-4">
+    <nav className="bg-[#004aad] text-white p-4 relative z-50">
       <div className="flex items-center gap-2">
 
 
       </div>
 
       <div className="flex items-center justify-between mx-auto container z-50">
-        <img src="/src/assets/MAVNT.png" alt="Logo" className="w-36" />
+        <img src={logo} alt="Logo" className="w-36" />
         {/* for large screens */}
         <ul className="md:flex gap-6 hidden">
           <li>
@@ -65,7 +66,7 @@ export default function NavBar() {
           </li>
 
           {/*  ----------------------------------------------    */}
-          <li className="relative">
+          <li className="relative z-50">
 
             <button onClick={toggleGlobe} className="cursor-pointer">
               <FaGlobe size={20} />
@@ -73,13 +74,12 @@ export default function NavBar() {
 
             {/*                    */}
             {isOpenGlobe && (
-              <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2  z-50">
-                <button
-                  onClick={() => changeLanguage("en")}
-                  className="px-3 py-1 text-black hover:bg-gray-300 rounded"
-                >
-                  English
-                </button>
+              <div className="absolute top-full mt-2 end-0 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2 z-[9999] min-w-[120px]">                <button
+                onClick={() => changeLanguage("en")}
+                className="px-3 py-1 text-black hover:bg-gray-300 rounded"
+              >
+                English
+              </button>
 
                 <button
                   onClick={() => changeLanguage("ar")}
@@ -127,14 +127,15 @@ export default function NavBar() {
             <FaGlobe size={20} />
           </button>
 
+
           {/*                    */}
           {isOpenGlobe && (
-            <div className="absolute right-0 mt-2 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2">
+            <div className="fixed top-16 right-4 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2 z-999">
               <button
                 onClick={() => changeLanguage("en")}
                 className="px-3 py-1  text-black hover:bg-gray-300 rounded"
               >
-              English
+                English
               </button>
 
               <button

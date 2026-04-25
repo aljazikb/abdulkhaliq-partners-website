@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "motion/react";
+import hero from "../assets/hero-video.mp4";
 
 export default function Herosection() {
   const { t } = useTranslation();
@@ -9,11 +10,14 @@ export default function Herosection() {
   return (
     <motion.div style={{ filter }} className="relative bg-[#ff914d] text-zinc-300 py-20 overflow-hidden">
       <video
-        src="/src/assets/hero-video.mp4"
+        src={hero}
         autoPlay
         loop
         muted
-        className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0"
+        playsInline
+        preload="auto"
+       
+        className="absolute top-0 left-0 w-full h-full object-cover opacity-70 z-0 pointer-events-none"
       ></video>
 
       <div className="container mx-auto px-4 relative z-10">
