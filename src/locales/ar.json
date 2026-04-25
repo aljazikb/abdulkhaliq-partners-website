@@ -31,7 +31,7 @@
   "aiIntegrationDescription": "تخطيط وتنفيذ محتوى إبداعي يساعد في نمو العلامة التجارية.",
 
 
- "portfolioDescription": "أعمالنا تتحدث عن نفسها",
+"portfolioDescription": "أعمالنا تتحدث عن نفسها",
 "all": "الكل",
 "photos": "تصوير",
 "videos": "مونتاج",
@@ -45,5 +45,15 @@
 "project6Title": "مشروع فيديو ٢",
 "project7Title": "مشروع سوشيال ٢",
 "project8Title": "مشروع تصميم ٢",
-"project9Title": "مشروع تصوير ٣"
+"project9Title": "مشروع تصوير ٣",
+
+
+ "footerTagline": "نصنع تجارب رقمية جريئة وهادفة ومبنية للدوام",
+  "footerLocation": "الموقع",
+  "footerFollow": "تابعنا",
+  "footerCity": "جدة، المملكة العربية السعودية",
+  "footerEmail": "hello@mavnt.com",
+  "footerRights": "جميع الحقوق محفوظة",
+  "footerDeveloped": "تم التطوير بواسطة"
 }
+
