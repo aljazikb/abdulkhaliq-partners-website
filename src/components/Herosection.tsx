@@ -25,22 +25,29 @@ export default function Herosection() {
     ));
 
   return (
-    <section className="relative h-screen flex items-start justify-center text-center overflow-hidden pt-24">
+    <section className="bg-blue-600 relative h-screen flex items-start justify-center text-center overflow-hidden pt-2">
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-blue-600 pointer-events-none" />
-
-      {/* Content */}
       <motion.div
         style={{ opacity }}
         initial={{ y: 40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative z-10 max-w-3xl px-6 text-white flex flex-col items-center gap-10"
+        className="relative z-10 flex flex-col items-center px-6"
+       
       >
-        <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-yellow-50">
-          {t("heroTitle")}
+        <h1 className="text-6xl md:text-7xl font-black leading-tight mb-10">
+          <span className="text-[#f5f0e8]">مقطـــع </span>
+          <span className="text-[#f5a623]">واحــد ,</span>
+          <br />
+          <span className="text-[#f5f0e8]">تســاوي </span>
+          <span className="text-[#5cd593]">ألف</span>
+          <br />
+          <span className="text-[#f4a7c3]">فرصة </span>
+          <span className="text-[#f5f0e8]">و</span>
+          <span className="text-[#f8815d]">ألف عميل.</span>
         </h1>
+  
 
         <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} href="#" className="inline-block bg-white text-[#004aad] px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition">
           {t("heroButton")}

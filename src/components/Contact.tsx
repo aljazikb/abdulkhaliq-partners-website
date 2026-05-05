@@ -1,125 +1,53 @@
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
+
 
 export default function Contact() {
-  const formRef = useRef<HTMLFormElement>(null);
-  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("sending");
-    emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formRef.current!, "YOUR_PUBLIC_KEY")
-      .then(() => setStatus("success"))
-      .catch(() => setStatus("error"));
-  };
-
   return (
-    <section className="bg-white py-16 px-6" dir="rtl" id="contact">
-      <div className="max-w-2xl mx-auto">
+    <section
+      className="bg-blue-600 min-h-[480px] flex flex-col items-center justify-center py-20 px-8 text-center"
+      dir="rtl"
+      id="contact"
+      style={{ fontFamily: "Tajawal, sans-serif" }}
+    >
+      <span className="text-[#25D366] text-xs font-black tracking-[3px] uppercase mb-7">
+        تواصل معنا
+      </span>
 
-        {/* White card */}
-        <div className="bg-gray-100 rounded-3xl px-10 py-12">
+      <h2 className="text-white text-6xl font-black leading-tight mb-1">
+        مستعدــون  للتعاون
+      </h2>
+      <h2 className="text-[#25D366] text-6xl font-black leading-tight mb-8 flex items-center gap-4">
+          معك 
+        <span className="inline-block -rotate-12">↗</span>
+      </h2>
 
-          <h2 className="text-[#004aad] text-2xl font-black mb-1.5 text-right" style={{ fontFamily: "Syne, sans-serif" }}>
-            تواصل معنا
-          </h2>
-          <p className="text-[#004aad]/50 text-sm mb-7 text-right">سنرد عليك في أقرب وقت ممكن</p>
+      <p className="text-white/40 text-base leading-loose max-w-md mb-14">
+        أنا دائماً مستعد لمشاريع جديدة وتعاونات مثمرة.<br />
+        سواء كان لديك فكرة أو استفسار — تواصل معي مباشرة.
+      </p>
 
-          {status === "success" ? (
-            <div className="bg-[#004aad]/8 border border-[#004aad]/15 rounded-xl px-6 py-10 text-center">
-              <p className="text-[#004aad] text-lg font-bold mb-1" style={{ fontFamily: "Syne, sans-serif" }}>
-                تم الإرسال بنجاح ✓
-              </p>
-              <p className="text-[#004aad]/60 text-sm">سنتواصل معك قريباً</p>
+      
+      <a
+        href="https://wa.me/966571373899"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-flex items-center gap-3 bg-[#25D366] text-white text-lg font-black px-10 py-5 rounded-full hover:opacity-90 hover:-translate-y-1 transition-all"
+      >
+        تحدث معنا على واتساب
+      </a>
+
+      <div className="flex gap-10 mt-16">
+        {[
+          { label: "رد سريع" },
+          { label: "أفكار جريئة" },
+          { label: "نتائج حقيقية" },
+        ].map((b) => (
+          <div key={b.label} className="flex flex-col items-center gap-2">
+            <div className="w-12 h-12 rounded-full border border-white/10 bg-white/4 flex items-center justify-center">
+              <span className="text-white/40 text-lg">✦</span>
             </div>
-          ) : (
-            <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col gap-4">
-
-              {/* Name + Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-[#004aad] text-xs font-semibold tracking-wide">الاسم</label>
-                  <input
-                    type="text"
-                    name="user_name"
-                    placeholder="أدخل اسمك"
-                    required
-                    className="bg-[#f5f7ff] border border-[#004aad]/12 focus:border-[#004aad] focus:bg-[#eef1ff] rounded-xl px-4 py-3 text-sm text-[#004aad] placeholder:text-[#004aad]/30 outline-none transition-colors text-right"
-                  />
-                </div>
-                <div className="flex flex-col gap-1.5">
-                  <label className="text-[#004aad] text-xs font-semibold tracking-wide">رقم الهاتف</label>
-                  <input
-                    type="tel"
-                    name="user_phone"
-                    placeholder="05xxxxxxxx"
-                    required
-                    className="bg-[#f5f7ff] border border-[#004aad]/12 focus:border-[#004aad] focus:bg-[#eef1ff] rounded-xl px-4 py-3 text-sm text-[#004aad] placeholder:text-[#004aad]/30 outline-none transition-colors text-right"
-                  />
-                </div>
-              </div>
-
-              {/* Email */}
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[#004aad] text-xs font-semibold tracking-wide">البريد الإلكتروني</label>
-                <input
-                  type="email"
-                  name="user_email"
-                  placeholder="example@email.com"
-                  required
-                  className="bg-[#f5f7ff] border border-[#004aad]/12 focus:border-[#004aad] focus:bg-[#eef1ff] rounded-xl px-4 py-3 text-sm text-[#004aad] placeholder:text-[#004aad]/30 outline-none transition-colors text-right"
-                />
-              </div>
-
-              {/* Service */}
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[#004aad] text-xs font-semibold tracking-wide">اختر الخدمة</label>
-                <select
-                  name="user_service"
-                  defaultValue=""
-                  required
-                  className="bg-[#f5f7ff] border border-[#004aad]/12 focus:border-[#004aad] focus:bg-[#eef1ff] rounded-xl px-4 py-3 text-sm text-[#004aad] outline-none transition-colors appearance-none cursor-pointer text-right"
-                >
-                  <option value="" disabled>اختر الخدمة المناسبة</option>
-                  <option>التسويق الرقمي</option>
-                  <option>التصميم الإبداعي</option>
-                  <option>التصوير الاحترافي</option>
-                  <option>المونتاج وصناعة الفيديو</option>
-                  <option>الحملات الإعلانية</option>
-                  <option>استراتيجية المحتوى</option>
-                </select>
-              </div>
-
-              {/* Message */}
-              <div className="flex flex-col gap-1.5">
-                <label className="text-[#004aad] text-xs font-semibold tracking-wide">اكتب عن الموضوع</label>
-                <textarea
-                  name="user_message"
-                  rows={5}
-                  placeholder="أخبرنا عن مشروعك أو استفسارك..."
-                  required
-                  className="bg-[#f5f7ff] border border-[#004aad]/12 focus:border-[#004aad] focus:bg-[#eef1ff] rounded-xl px-4 py-3 text-sm text-[#004aad] placeholder:text-[#004aad]/30 outline-none transition-colors resize-none text-right"
-                />
-              </div>
-
-              {status === "error" && (
-                <p className="text-red-500 text-sm text-center">حدث خطأ، يرجى المحاولة مرة أخرى</p>
-              )}
-
-              {/* Submit */}
-              <button
-                type="submit"
-                disabled={status === "sending"}
-                className="w-full bg-[#004aad] text-white rounded-xl py-3.5 font-black text-base hover:opacity-90 hover:-translate-y-0.5 transition-all mt-2 disabled:opacity-60 disabled:cursor-not-allowed"
-                style={{ fontFamily: "Syne, sans-serif" }}
-              >
-                {status === "sending" ? "جاري الإرسال..." : "إرسال الرسالة ←"}
-              </button>
-
-            </form>
-          )}
-        </div>
+            <span className="text-white/30 text-xs">{b.label}</span>
+          </div>
+        ))}
       </div>
     </section>
   );
