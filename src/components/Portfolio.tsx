@@ -3,19 +3,18 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import IMG_4402 from "../assets/IMG_4402.png";
-import vide_4402 from "../assets/vide_4402.mp4";
+
 import IMG_4403 from "../assets/IMG_4403.png";
-import vide_4403 from "../assets/vide_4403.mp4";
+
 import IMG_4401 from "../assets/IMG_4401.png";
-import vide_4401 from "../assets/vide_4401.mp4";
+
 import IMG_4404 from "../assets/IMG_4404.png";
-import vide_4404 from "../assets/vide_4404.mp4";
 
 const VIDEOS = [
-  { id: 1, src: vide_4402, thumb: IMG_4402, label: "تصوير منتج", category: "product" },
-  { id: 2, src: vide_4403 , thumb: IMG_4403, label: "تصوير عقاري", category: "reel" },
-  { id: 3, src: vide_4401, thumb: IMG_4401, label: "محتوى مطعم", category: "food" },
-  { id: 4, src: vide_4404, thumb: IMG_4404, label: "تصوير عقاري", category: "real-estate" },
+  { id: 1, src:"https://www.youtube.com/embed/WeQ_212A8Vw?autoplay=1&mute=1&controls=1&loop=1&playlist=WeQ_212A8Vw", thumb: IMG_4402, label: "تصوير منتج", category: "product" },
+  { id: 2, src:"https://www.youtube.com/embed/9LmHohun6OE?autoplay=1&mute=1&controls=1&loop=1&playlist=9LmHohun6OE", thumb: IMG_4403, label: "تصوير عقاري", category: "reel" },
+  { id: 3, src: "https://www.youtube.com/embed/joFvOimjsqg?autoplay=1&mute=1&controls=1&loop=1&playlist=joFvOimjsqg", thumb: IMG_4401, label: "محتوى مطعم", category: "food" },
+  { id: 4, src: "https://www.youtube.com/embed/FwWtqkIa2jQ?autoplay=1&mute=1&controls=1&loop=1&playlist=FwWtqkIa2jQ", thumb: IMG_4404, label: "تصوير عقاري", category: "real-estate" },
 ];
 
 
@@ -123,14 +122,12 @@ function Lightbox({ video, onClose }: { video: typeof VIDEOS[0]; onClose: () => 
               boxShadow: "0 0 0 3px #333, 0 40px 80px rgba(0,0,0,0.8)",
             }}
           >
-            <video
+            <iframe
               src={video.src}
-              autoPlay
-              loop
-              muted={false}
-              playsInline
-              controls
-              className="w-full h-full object-cover"
+              className="w-full h-full"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+            //className="w-full h-full object-cover"
             />
           </div>
           {/* Label */}
@@ -158,8 +155,10 @@ export default function Portfolio() {
       id="portfolio"
       className="py-24 px-6 md:px-16 min-h-screen bg-blue-600 overflow-hidden"
     >
+
       {/* Header */}
       <motion.div
+
         className="max-w-6xl mx-auto mb-16"
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
