@@ -6,6 +6,7 @@ import Services from "./components/Services"
 import Portfolio from "./components/Portfolio"
 import Footer from "./components/Footer"
 import Contact from "./components/Contact"
+import Aboutword from "./components/Aboutword"
 
 
 
@@ -19,6 +20,7 @@ function App() {
        <AboutUs />
        <Services />
        <Portfolio />
+       <Aboutword />
        <Contact />
        <Footer />
     </div>

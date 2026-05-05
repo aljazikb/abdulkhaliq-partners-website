@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { motion, useScroll, useTransform } from "motion/react";
 
+
 const STRIP_ITEMS = [
   "تصوير",
   "مونتاج",
@@ -12,6 +13,8 @@ const STRIP_ITEMS = [
 
 
 export default function Herosection() {
+  const { i18n } = useTranslation();
+const isRTL = i18n.dir() === "rtl";
   const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.6]);
@@ -73,16 +76,16 @@ export default function Herosection() {
       >
         <div className="bg-orange-500 py-9 flex whitespace-nowrap items-center">
           <motion.div
-            className="flex gap-4 text-yellow-50 font-black text-sm md:text-base tracking-widest uppercase"
-            animate={{ x: ["0%", "-33.33%"] }}
-            transition={{
-              duration: 20,
-              ease: "linear",
-              repeat: Infinity,
-            }}
-          >
-            {stripContent}
-          </motion.div>
+  className="flex gap-4 text-yellow-50 font-black text-sm md:text-base tracking-widest uppercase"
+  animate={{ x: isRTL ? ["0%", "33.33%"] : ["0%", "-33.33%"] }}
+  transition={{
+    duration: 20,
+    ease: "linear",
+    repeat: Infinity,
+  }}
+>
+  {stripContent}
+</motion.div>
         </div>
       </div>
 
