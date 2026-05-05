@@ -49,16 +49,22 @@ export default function Herosection() {
 
       {/* Diagonal Ticker Strip */}
       <div
-        className="absolute bottom-32 left-0 right-0 z-20 overflow-hidden"
-        style={{ transform: "rotate(8deg) scaleX(1.1)" }}
+        className="absolute bottom-60 left-1/2 t w-[150%] z-20 overflow-hidden"
+        style={{
+          transform: "translateX(-50%) rotate(7deg)",
+        }}
       >
-        <div className="bg-white/30 py-12 flex whitespace-nowrap items-center"></div>
+        <div className="bg-white/30 py-9 min-h-[60px] flex items-center">
+        </div>
       </div>
-
+   
       <div
-        className="absolute bottom-20 left-0 right-0 z-20 overflow-hidden"
-        style={{ transform: "rotate(-3deg) scaleX(1.1)" }}>
-        <div className="bg-orange-500 py-12 flex whitespace-nowrap  items-center">
+        className="absolute  bottom-40 left-1/2 w-[150%] z-20 overflow-hidden"
+        style={{
+          transform: "translateX(-50%) rotate(-7deg)",
+        }}
+      >
+        <div className="bg-orange-500 py-9 flex whitespace-nowrap items-center">
           <motion.div
             className="flex gap-4 text-yellow-50 font-black text-sm md:text-base tracking-widest uppercase"
             animate={{ x: ["0%", "-33.33%"] }}
@@ -66,7 +72,6 @@ export default function Herosection() {
               duration: 20,
               ease: "linear",
               repeat: Infinity,
-
             }}
           >
             {stripContent}
@@ -75,6 +80,6 @@ export default function Herosection() {
       </div>
 
 
-    </section>
+    </section >
   );
 }
