@@ -1,106 +1,204 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
-const categories = ["all", "photos", "videos", "socialMedia", "designs"] as const;
-type Category = (typeof categories)[number];
+import IMG_4402 from "../assets/IMG_4402.png";
+import vide_4402 from "../assets/vide_4402.mp4";
+import IMG_4403 from "../assets/IMG_4403.png";
+import vide_4403 from "../assets/vide_4403.mp4";
+import IMG_4401 from "../assets/IMG_4401.png";
+import vide_4401 from "../assets/vide_4401.mp4";
+import IMG_4404 from "../assets/IMG_4404.png";
+import vide_4404 from "../assets/vide_4404.mp4";
 
-const projects = [
-  { id: 1, category: "photos", image: "../assets/MAVNT.png", titleKey: "project1Title" },
-  { id: 2, category: "videos", image: "../assets/MAVNT.png", titleKey: "project2Title" },
-  { id: 3, category: "socialMedia", image: "../assets/MAVNT.png", titleKey: "project3Title" },
-  { id: 4, category: "designs", image: "../assets/MAVNT.png", titleKey: "project4Title" },
-  { id: 5, category: "photos", image: "../assets/MAVNT.png", titleKey: "project5Title" },
-  { id: 6, category: "videos", image: "../assets/MAVNT.png", titleKey: "project6Title" },
-  { id: 7, category: "socialMedia", image: "../assets/MAVNT.png", titleKey: "project7Title" },
-  { id: 8, category: "designs", image: "../assets/MAVNT.png", titleKey: "project8Title" },
-  { id: 9, category: "photos", image: "../assets/MAVNT.png", titleKey: "project9Title" },
+const VIDEOS = [
+  { id: 1, src: vide_4402, thumb: IMG_4402, label: "تصوير منتج", category: "product" },
+  { id: 2, src: vide_4403 , thumb: IMG_4403, label: "تصوير عقاري", category: "reel" },
+  { id: 3, src: vide_4401, thumb: IMG_4401, label: "محتوى مطعم", category: "food" },
+  { id: 4, src: vide_4404, thumb: IMG_4404, label: "تصوير عقاري", category: "real-estate" },
 ];
 
-export default function Portfolio() {
-  const { t } = useTranslation();
-  const [active, setActive] = useState<Category>("all");
 
-  const filtered =
-    active === "all" ? projects : projects.filter((p) => p.category === active);
+// ── Phone mockup card ─────────────────────────────────────────────────────────
+function PhoneCard({ video, index, onClick }: { video: typeof VIDEOS[0]; index: number; onClick: () => void }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleMouseEnter = () => videoRef.current?.play();
+  const handleMouseLeave = () => {
+    if (videoRef.current) { videoRef.current.pause(); videoRef.current.currentTime = 0; }
+  };
 
   return (
-    <section id="portfolio" className="py-20 px-6 bg-white min-h-screen">
-      {/* Header */}
-      <motion.h2
-        className="text-3xl font-bold text-center mb-2 text-gray-800"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+    <motion.div
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.55, delay: index * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+      className="flex flex-col items-center gap-3 cursor-pointer"
+      onClick={onClick}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      {/* Phone frame */}
+      <motion.div
+        whileHover={{ scale: 1.04, y: -6 }}
+        transition={{ duration: 0.3 }}
+        className="relative"
+        style={{ width: 180, height: 360 }}
       >
-        {t("portfolio")}
-      </motion.h2>
+        {/* Outer shell */}
+        <div
+          className="absolute inset-0 rounded-[2.5rem] z-10 pointer-events-none"
+          style={{
+            background: "linear-gradient(145deg, #2a2a2a, #111)",
+            boxShadow: "0 0 0 2px #333, 0 30px 60px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.08)",
+          }}
+        />
+        {/* Screen bezel */}
+        <div
+          className="absolute inset-[6px] rounded-[2rem] overflow-hidden z-20 bg-black"
+        >
+          {/* Notch */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-16 h-5 bg-black rounded-b-xl z-30" />
+          {/* Video */}
+          <video
+            ref={videoRef}
+            src={video.src}
+            poster={video.thumb}
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          {/* Overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          {/* Play hint */}
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div className="w-10 h-10 rounded-full bg-orange-500/80 flex items-center justify-center">
+              <span className="text-white text-sm ml-0.5">▶</span>
+            </div>
+          </div>
+          {/* Label on screen */}
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center">
+            <span className="text-white text-xs font-bold bg-orange-500/90 px-3 py-1 rounded-full">
+              {video.label}
+            </span>
+          </div>
+        </div>
+        {/* Side buttons */}
+        <div className="absolute -right-[3px] top-16 w-[3px] h-8 bg-[#333] rounded-r-sm" />
+        <div className="absolute -left-[3px] top-12 w-[3px] h-6 bg-[#333] rounded-l-sm" />
+        <div className="absolute -left-[3px] top-20 w-[3px] h-10 bg-[#333] rounded-l-sm" />
+      </motion.div>
+    </motion.div>
+  );
+}
 
-      <motion.p
-        className="text-center text-gray-500 mb-10 text-sm"
+// ── Lightbox fullscreen player ────────────────────────────────────────────────
+function Lightbox({ video, onClose }: { video: typeof VIDEOS[0]; onClose: () => void }) {
+  return (
+    <AnimatePresence>
+      <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-md"
+        onClick={onClose}
       >
-        {t("portfolioDescription")}
-      </motion.p>
-
-      {/* Filter Tabs */}
-      <div className="flex flex-wrap justify-center gap-3 mb-10">
-        {categories.map((cat) => (
-          <button
-            key={cat}
-            onClick={() => setActive(cat)}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-              active === cat
-                ? "bg-blue-600 text-white shadow-md"
-                : "bg-gray-100 text-gray-600 hover:bg-gray-200"
-            }`}
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 300, damping: 28 }}
+          className="relative flex flex-col items-center gap-4"
+          onClick={(e) => e.stopPropagation()}
+          style={{ width: "min(360px, 90vw)" }}
+        >
+          {/* Phone mockup fullscreen */}
+          <div
+            className="relative w-full rounded-[3rem] overflow-hidden"
+            style={{
+              aspectRatio: "9/16",
+              background: "#000",
+              boxShadow: "0 0 0 3px #333, 0 40px 80px rgba(0,0,0,0.8)",
+            }}
           >
-            {t(cat)}
+            <video
+              src={video.src}
+              autoPlay
+              loop
+              muted={false}
+              playsInline
+              controls
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Label */}
+          <span className="text-white font-bold text-lg">{video.label}</span>
+          {/* Close */}
+          <button
+            onClick={onClose}
+            className="absolute -top-4 -right-4 w-9 h-9 rounded-full bg-orange-500 text-white font-black flex items-center justify-center text-lg hover:bg-orange-400 transition"
+          >
+            ×
           </button>
-        ))}
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
+}
+
+// ── Main section ──────────────────────────────────────────────────────────────
+export default function Portfolio() {
+  const { t } = useTranslation();
+  const [active, setActive] = useState<typeof VIDEOS[0] | null>(null);
+
+  return (
+    <section
+      id="portfolio"
+      className="py-24 px-6 md:px-16 min-h-screen bg-blue-600 overflow-hidden"
+    >
+      {/* Header */}
+      <motion.div
+        className="max-w-6xl mx-auto mb-16"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-px flex-1 rounded-full bg-orange-500 opacity-40" />
+          <h2 className="text-4xl md:text-5xl font-black text-orange-500 whitespace-nowrap">
+            {t("portfolio") ?? "أعمالنا"}
+          </h2>
+          <div className="h-px flex-1 rounded-full bg-orange-500 opacity-40" />
+        </div>
+        <p className="text-center text-white/60 text-base mt-2">
+          {t("portfolioSubtitle") ?? "اضغط على أي فيديو لمشاهدته كاملاً"}
+        </p>
+      </motion.div>
+
+      {/* Phone grid */}
+      <div className="max-w-6xl mx-auto">
+        {/* Row 1 — phones staggered high/low for visual interest */}
+        <div className="flex flex-wrap justify-center gap-6 md:gap-10">
+          {VIDEOS.map((video, i) => (
+            <div
+              key={video.id}
+              style={{ marginTop: i % 2 === 1 ? 40 : 0 }}
+            >
+              <PhoneCard
+                video={video}
+                index={i}
+                onClick={() => setActive(video)}
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
-      {/* Grid */}
-      <motion.div
-        layout
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
-      >
-        <AnimatePresence>
-          {filtered.map((project) => (
-            <motion.div
-              key={project.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.35, ease: "easeInOut" }}
-              whileHover={{ y: -6, transition: { duration: 0.2 } }}
-              className="rounded-2xl overflow-hidden shadow-md bg-gray-100 cursor-pointer group"
-            >
-              <div className="relative w-full h-60">
-                <img
-                  src={project.image}
-                  alt={t(project.titleKey)}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white font-semibold text-lg">{t(project.titleKey)}</p>
-                </div>
-              </div>
-
-              {/* Category badge */}
-              <div className="px-4 py-3 flex items-center justify-between">
-                <span className="text-xs text-gray-400 uppercase tracking-wide">
-                  {t(project.category)}
-                </span>
-              </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </motion.div>
+      {/* Lightbox */}
+      {active && <Lightbox video={active} onClose={() => setActive(null)} />}
     </section>
   );
 }

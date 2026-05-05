@@ -1,9 +1,9 @@
 {
-  "home": "الرئيسية",
+  "home": "الرئيسية",  
   "about": "مـن نـحن",
-  "services": "خدماتنـا",
+  "services": "خدماتنـــا",
   "portfolio": "أعمالنا",
-  "contact": "اتصل بنا",
+  "contact": "تواصل معنــا",
 
   "heroTitle": "محتـوى قـــوي. حضـور أقـــوى",
   "heroSubtitle": "تـصوير | مـونتــاج | كتابــة محتـوى للسوشيـال ميديـا",
@@ -33,10 +33,9 @@
 
 "portfolioDescription": "أعمالنا تتحدث عن نفسها",
 "all": "الكل",
-"photos": "تصوير",
-"videos": "مونتاج",
-"socialMedia": "سوشيال ميديا",
-"designs": "تصاميم",
+"realEstate": "عقارات",
+"cars": "سيارات",
+"halls": "قاعات",
 "project1Title": "مشروع تصوير ١",
 "project2Title": "مشروع فيديو ١",
 "project3Title": "مشروع سوشيال ١",
@@ -54,6 +53,13 @@
   "footerCity": "جدة، المملكة العربية السعودية",
   "footerEmail": "hello@mavnt.com",
   "footerRights": "جميع الحقوق محفوظة",
-  "footerDeveloped": "تم التطوير بواسطة"
+  "footerDeveloped": "تم التطوير بواسطة",
+
+  "viewProject": "عرض المشروع",
+  "close": "إغلاق",
+  "contactUs": "تواصل معنا"
+  
+
+
 }
 

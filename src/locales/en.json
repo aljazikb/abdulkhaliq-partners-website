@@ -1,6 +1,6 @@
 {
   "home": "Home",
-  "about": "About",
+  "about": "About Us",
   "services": "Services",
   "portfolio": "Portfolio",
   "contact": "Contact",
@@ -26,7 +26,37 @@
   "seoMarketingDescription": "Managing paid advertising campaigns across social media platforms to increase reach and sales.",
 
   "aiIntegrationTitle": "Content Strategy",
-  "aiIntegrationDescription": "Planning and creating creative content strategies to grow your brand effectively."
+  "aiIntegrationDescription": "Planning and creating creative content strategies to grow your brand effectively.",
+
+  "project1Title": "Project 1",
+  "project2Title": "Project 2",
+  "project3Title": "Project 3",
+  "project4Title": "Project 4",
+  "project5Title": "Project 5",
+  "project6Title": "Project 6",
+  "project7Title": "Project 7",
+  "project8Title": "Project 8",
+  "project9Title": "Project 9",
+  "portfolioDescription": "Our work speaks for itself",
+  "all": "All",
+  "realEstate": "Real Estate",
+  "cars": "Cars",
+  "halls": "Halls",
+    
+
+  "footerTagline": "We create bold, purposeful, and enduring digital experiences",
+  "footerLocation": "Location",
+  "footerFollow": "Follow Us",
+  "footerCity": "Jeddah, Saudi Arabia",
+  "footerEmail": "hello@mavnt.com",
+
+  
+
+  "viewProject": "View Project",
+  "close": "Close",
+  "contactUs": "Contact Us"
+
+
 
 
 

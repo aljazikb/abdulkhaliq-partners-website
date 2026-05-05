@@ -2,37 +2,48 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 const servicesMeta = [
-  { key: "webDevelopment", icon: "🌐", color: "border-blue-500", accent: "bg-blue-50" },
-  { key: "uiUxDesign",     icon: "🎨", color: "border-violet-500", accent: "bg-violet-50" },
-  { key: "mobileApps",     icon: "📱", color: "border-emerald-500", accent: "bg-emerald-50" },
-  { key: "cloudSolutions", icon: "☁️", color: "border-sky-500", accent: "bg-sky-50" },
-  { key: "seoMarketing",   icon: "📈", color: "border-orange-500", accent: "bg-orange-50" },
-  { key: "aiIntegration",  icon: "🤖", color: "border-pink-500", accent: "bg-pink-50" },
+  { key: "webDevelopment" },
+  { key: "uiUxDesign" },
+  { key: "mobileApps" },
 ];
 
 function ServiceCard({
-  service,
-  i,
-}: {
-  service: { title: string; description: string; icon: string; color: string; accent: string };
-  i: number;
-}) {
+  service, i, }: {
+    service: { title: string; description: string };
+    i: number;
+  }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: i * 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-      whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
-      className={`bg-white rounded-2xl shadow-sm border-l-4 ${service.color} p-6 flex flex-col items-center justify-center gap-4 cursor-default min-h-[300px]`}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.5, delay: i * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+      whileHover="hover"
+      className="group relative flex flex-col gap-6 p-8 rounded-2xl cursor-default overflow-hidden min-h-[380px]"
+      style={{
+        background: "rgba(255,255,255,0.1)",
+        border: "1px solid rgba(249,115,22,0.2)",
+      }}
     >
-      <div className={`text-3xl w-12 h-12 flex items-center justify-center rounded-xl ${service.accent} flex-shrink-0`}>
-        {service.icon}
+
+      {/* Divider */}
+      <motion.div
+        className="h-1 w-14 rounded-full"
+        style={{ background: "#f97316" }}
+        variants={{ hover: { width: "100%" } }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
+      />
+
+      {/* Text */}
+      <div className="flex flex-col gap-4 flex-1">
+        <h3 className="text-2xl font-bold text-white leading-snug">
+          {service.title}
+        </h3>
+        <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
+          {service.description}
+        </p>
       </div>
-      <div className="text-center">
-        <h3 className="text-lg font-semibold text-gray-800 mb-1">{service.title}</h3>
-        <p className="text-gray-500 text-sm leading-relaxed">{service.description}</p>
-      </div>
+
     </motion.div>
   );
 }
@@ -40,7 +51,6 @@ function ServiceCard({
 export default function Services() {
   const { t } = useTranslation();
 
-  // Build the services array here where t() is valid
   const services = servicesMeta.map((s) => ({
     ...s,
     title: t(`${s.key}Title`),
@@ -48,26 +58,27 @@ export default function Services() {
   }));
 
   return (
-    <section id="services" className="py-20 px-6 bg-gray-100 min-h-screen">
-      <motion.h2
-        className="text-3xl font-bold text-center mb-2 text-gray-800"
+    <section id="services" className="py-24 px-6 md:px-16 min-h-screen bg-blue-600">
+      {/* Section header */}
+      <motion.div
+        className="max-w-6xl mx-auto mb-14"
         initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
       >
-        {t("services")}
-      </motion.h2>
+        <div className="flex items-center gap-3 mb-4">
+          <div className="h-px w-130 rounded-full" style={{ background: "#f97316" }} />
+          <h2 className="text-4xl md:text-5xl font-black leading-tight text-orange-500 whitespace-nowrap">
+            {t("services")}
+          </h2>
+          <div className="h-px w-130 rounded-full" style={{ background: "#f97316" }} />
+        </div>
 
-      <motion.p
-        className="text-center text-gray-500 mb-12 text-sm"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.2, duration: 0.5 }}
-      >
-        {t("servicesDescription")}
-      </motion.p>
+      </motion.div>
 
-      <div className="max-w-2xl max-h-6xl mx-auto flex flex-col gap-5">
+      {/* Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {services.map((service, i) => (
           <ServiceCard key={service.key} service={service} i={i} />
         ))}
