@@ -5,10 +5,10 @@ export default function Footer() {
     const { t } = useTranslation();
 
     return (
-        <footer className="bg-[#ff914d] relative overflow-hidden">
+        <footer className="bg-[#BF6F3D] relative overflow-hidden">
             {/* Decorative circles */}
-            <div className="absolute -right-14 -bottom-14 w-64 h-64 rounded-full border-[36px] border-[#004aad]/10 pointer-events-none" />
-            <div className="absolute -left-12 -top-12 w-44 h-44 rounded-full border-[26px] border-[#004aad]/6 pointer-events-none" />
+            <div className="absolute -right-14 -bottom-14 w-64 h-64 rounded-full border-[36px] border-white/20 pointer-events-none" />
+            <div className="absolute -left-12 -top-12 w-44 h-44 rounded-full border-[26px] border-white/20 pointer-events-none" />
 
             {/* Main content */}
             <div className="max-w-5xl mx-auto px-10 pt-14 pb-10">
@@ -16,10 +16,10 @@ export default function Footer() {
 
                     {/* Brand */}
                     <div className="flex-1 min-w-[240px] max-w-sm">
-                        <h2 className="font-black text-[#004aad] text-3xl tracking-tight mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
-                            MAVNT<span className="opacity-30">.</span>
+                        <h2 className="font-black text-white text-3xl tracking-tight mb-3" style={{ fontFamily: 'Syne, sans-serif' }}>
+                            MAVNT<span className="opacity-30"></span>
                         </h2>
-                        <p className="text-[#004aad]/75 text-sm leading-relaxed">
+                        <p className="text-white  text-sm leading-relaxed">
                             {t("footerTagline")}
                         </p>
                     </div>
@@ -28,18 +28,16 @@ export default function Footer() {
 
                         {/* Location */}
                         <div>
-                            <p className="text-[#004aad] font-bold text-[0.7rem] tracking-[0.14em] uppercase mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
-                                {t("footerLocation")}
-                            </p>
+                           
                             <div className="flex flex-col gap-3">
-                                <div className="flex items-center gap-2 text-[#004aad]/75 text-sm">
-                                    <svg className="w-4 h-4 fill-[#004aad]/70 flex-shrink-0" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-2 text-white  text-sm">
+                                    <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24">
                                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
                                     </svg>
                                     {t("footerCity")}
                                 </div>
-                                <div className="flex items-center gap-2 text-[#004aad]/75 text-sm">
-                                    <svg className="w-4 h-4 fill-[#004aad]/70 flex-shrink-0" viewBox="0 0 24 24">
+                                <div className="flex items-center gap-2 text-white  text-sm">
+                                    <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24">
                                         <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
                                     </svg>
                                     {t("footerEmail")}
@@ -49,7 +47,7 @@ export default function Footer() {
 
                         {/* Socials */}
                         <div>
-                            <p className="text-[#004aad] font-bold text-[0.7rem] tracking-[0.14em] uppercase mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
+                            <p className="text-white font-bold text-[0.7rem] tracking-[0.14em] uppercase mb-4" style={{ fontFamily: 'Syne, sans-serif' }}>
                                 {t("footerFollow")}
                             </p>
                             <div className="flex flex-col gap-3">
@@ -76,9 +74,9 @@ export default function Footer() {
                                         href={href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-2.5 text-[#004aad]/75 text-sm no-underline hover:opacity-100 opacity-75 transition-all hover:gap-4"
+                                        className="flex items-center gap-2.5 text-white text-sm no-underline hover:opacity-100 opacity-75 transition-all hover:gap-4"
                                     >
-                                        <svg className="w-4 h-4 fill-[#004aad] flex-shrink-0" viewBox="0 0 24 24">
+                                        <svg className="w-4 h-4 fill-white flex-shrink-0" viewBox="0 0 24 24">
                                             <path d={path} />
                                         </svg>
                                         {label}
@@ -94,16 +92,16 @@ export default function Footer() {
 
             {/* Bottom bar */}
             <div className="max-w-5xl mx-auto px-10 py-3 flex flex-row justify-between items-center">
-                <span className="text-[#004aad]/55 text-[10px] sm:text-xs">
-                    © 2026 <strong className="text-[#004aad]/80">MAVNT</strong>. All rights reserved.
+                <span className="text-white text-[10px] sm:text-xs">
+                     2026 All rights reserved <strong className="text-white">MAVNT</strong>
                 </span>
                 <a
                     href="https://aljazy.dev"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-[#004aad]/55 text-[10px] sm:text-xs hover:opacity-100 transition-opacity"
+                    className="text-white text-[10px] sm:text-xs hover:opacity-100 transition-opacity"
                 >
-                    {t("footerDeveloped")} <strong className="text-[#004aad]/80">Aljazy</strong>
+                    {t("footerDeveloped")} <strong className="text-white">Aljazy</strong>
                 </a>
             </div>
 

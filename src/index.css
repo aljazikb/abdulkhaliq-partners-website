@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* 1. Prevent horizontal overflow on the root elements */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
 
 
 @layer base {
@@ -16,19 +21,28 @@
 }
 
 .lalezar {
-  font-weight: 200;
+  font-weight: 100;
 }
+
+
 .marquee {
   overflow: hidden;
   width: 100%;
+  /* Add this: */
+  position: relative;
 }
 
+/* 3. Use will-change to isolate the animation in its own layer */
 .marquee-track {
   display: flex;
   width: max-content;
   gap: 40px;
   animation: scroll 20s linear infinite;
+  /* Add these: */
+  will-change: transform;
+  backface-visibility: hidden;
 }
+
 
 /* عكس الاتجاه */
 .marquee-track.reverse {
@@ -51,5 +65,17 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+.sketch {
+  filter: url(#rough);
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 200;
+  }
+  to {
+    stroke-dashoffset: 0;
   }
 }

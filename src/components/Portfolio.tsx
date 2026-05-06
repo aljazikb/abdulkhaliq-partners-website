@@ -11,10 +11,10 @@ import IMG_4401 from "../assets/IMG_4401.png";
 import IMG_4404 from "../assets/IMG_4404.png";
 
 const VIDEOS = [
-  { id: 1, src:"https://www.youtube.com/embed/WeQ_212A8Vw?autoplay=1&mute=1&controls=1&loop=1&playlist=WeQ_212A8Vw", thumb: IMG_4402, label: "تصوير منتج", category: "product" },
-  { id: 2, src:"https://www.youtube.com/embed/9LmHohun6OE?autoplay=1&mute=1&controls=1&loop=1&playlist=9LmHohun6OE", thumb: IMG_4403, label: "تصوير عقاري", category: "reel" },
-  { id: 3, src: "https://www.youtube.com/embed/joFvOimjsqg?autoplay=1&mute=1&controls=1&loop=1&playlist=joFvOimjsqg", thumb: IMG_4401, label: "محتوى مطعم", category: "food" },
-  { id: 4, src: "https://www.youtube.com/embed/FwWtqkIa2jQ?autoplay=1&mute=1&controls=1&loop=1&playlist=FwWtqkIa2jQ", thumb: IMG_4404, label: "تصوير عقاري", category: "real-estate" },
+  { id: 1, src:"https://www.youtube.com/embed/WeQ_212A8Vw?autoplay=1&mute=1&controls=1&loop=1&playlist=WeQ_212A8Vw", thumb: IMG_4402, label: "تصويـر تجــاري", category: "product" },
+  { id: 2, src:"https://www.youtube.com/embed/9LmHohun6OE?autoplay=1&mute=1&controls=1&loop=1&playlist=9LmHohun6OE", thumb: IMG_4403, label: "تصويـر عقــاري", category: "reel" },
+  { id: 3, src: "https://www.youtube.com/embed/joFvOimjsqg?autoplay=1&mute=1&controls=1&loop=1&playlist=joFvOimjsqg", thumb: IMG_4401, label: "محتـوى تجــاري", category: "food" },
+  { id: 4, src: "https://www.youtube.com/embed/FwWtqkIa2jQ?autoplay=1&mute=1&controls=1&loop=1&playlist=FwWtqkIa2jQ", thumb: IMG_4404, label: "محتـوى تجــاري", category: "real-estate" },
 ];
 
 
@@ -153,7 +153,7 @@ export default function Portfolio() {
   return (
     <section
       id="portfolio"
-      className="py-24 px-6 md:px-16 min-h-screen bg-blue-600 overflow-hidden"
+      className="py-24 px-6 md:px-16 min-h-screen bg-[#45A7AA] overflow-hidden"
     >
 
       {/* Header */}
@@ -166,14 +166,14 @@ export default function Portfolio() {
         transition={{ duration: 0.6 }}
       >
         <div className="flex items-center gap-3 mb-4">
-          <div className="h-px flex-1 rounded-full bg-orange-500 opacity-40" />
-          <h2 className="text-4xl md:text-5xl font-black text-orange-500 whitespace-nowrap">
+          <div className="h-px flex-1 rounded-full bg-[#FF6D12] opacity-40" />
+          <h2 className="text-4xl md:text-5xl font-black text-[#FF6D12] whitespace-nowrap drop-shadow-lg">
             {t("portfolio") ?? "أعمالنا"}
           </h2>
-          <div className="h-px flex-1 rounded-full bg-orange-500 opacity-40" />
+          <div className="h-px flex-1 rounded-full bg-[#FF6D12] opacity-40" />
         </div>
         <p className="text-center text-white/60 text-base mt-2">
-          {t("portfolioSubtitle") ?? "اضغط على أي فيديو لمشاهدته كاملاً"}
+         اضغط على أي فيديو لمشاهدته كاملاً
         </p>
       </motion.div>
 

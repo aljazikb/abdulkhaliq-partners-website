@@ -36,7 +36,7 @@ function ServiceCard({
 
       {/* Text */}
       <div className="flex flex-col gap-4 flex-1">
-        <h3 className="text-2xl font-bold text-white leading-snug">
+        <h3 className="text-2xl font-bold text-white leading-snug drop-shadow-lg">
           {service.title}
         </h3>
         <p className="text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.55)" }}>
@@ -58,7 +58,7 @@ export default function Services() {
   }));
 
   return (
-    <section id="services" className="py-24 px-6 md:px-16 min-h-screen bg-blue-600">
+    <section id="services" className="py-24 px-6 md:px-16 min-h-screen bg-[#45A7AA] ">
       {/* Section header */}
       <motion.div
         className="max-w-6xl mx-auto mb-14"
@@ -69,7 +69,7 @@ export default function Services() {
       >
         <div className="flex items-center gap-3 mb-4">
           <div className="h-px w-130 rounded-full" style={{ background: "#f97316" }} />
-          <h2 className="text-4xl md:text-5xl font-black leading-tight text-orange-500 whitespace-nowrap">
+          <h2 className="text-4xl md:text-5xl font-black leading-tight text-[#FF6D12] whitespace-nowrap drop-shadow-lg">
             {t("services")}
           </h2>
           <div className="h-px w-130 rounded-full" style={{ background: "#f97316" }} />

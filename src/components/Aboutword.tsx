@@ -1,22 +1,23 @@
 const WORDS = [
-  "نصنع محتوى يبيع",
-  "نحوّل الأفكار لنتائج",
-  "نبني حضورك الرقمي",
-  "نرفع قيمة البراند",
+  "تم إنتاج أكثر من 71 محتوى إبداعي",
+  "تم تصوير أكثر من 100 مقطع احترافي",
+  "تم إدارة أكثر من 10 حسابات بنجاح",
+  "أكثر من 50 حملة تسويقية ناجحه",
+  "مشاهدات أعلى لعملائنا بنسبة %150"
 ];
 
 export default function Aboutword() {
-  const row = [...WORDS, ...WORDS].map((item, i) => (
+  const row = [...WORDS].map((item, i) => (
     <span key={i} className="flex items-center gap-6 whitespace-nowrap">
-      <h2 className="text-3xl md:text-5xl text-white/70 font-bold">
+      <h2 className="text-3xl md:text-5xl text-yellow-50 ">
         {item}
       </h2>
-      <span className="text-white/30 text-3xl">•</span>
+      <h1 className="text-white/30 text-6xl">•</h1>
     </span>
   ));
 
   return (
-    <div className="bg-blue-600 overflow-hidden py-10 space-y-8">
+    <div className="bg-[#45A7AA] overflow-hidden py-10 space-y-8">
 
       {/* Row 1 */}
       <div className="marquee" dir="ltr">

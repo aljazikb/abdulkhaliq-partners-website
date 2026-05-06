@@ -4,7 +4,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { FaGlobe } from "react-icons/fa";
 import i18n from "../i18n";
-import logo from "../assets/MAVNT1.png";
+import logo from "../assets/MAVNT.png";
 
 
 
@@ -41,7 +41,7 @@ export default function NavBar() {
   };
 
   return (
-    <nav className="bg-blue-600 text-white p-4 relative z-50">
+    <nav className="bg-[#45A7AA] text-yellow-50 p-4 relative z-50">
 
       <div className="flex items-center justify-between mx-auto container z-50">
         <img src={logo} alt="Logo" className="w-36" />
