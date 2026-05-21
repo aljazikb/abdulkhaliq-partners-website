@@ -3,26 +3,24 @@ import { motion, useScroll, useTransform } from "motion/react";
 
 
 const STRIP_ITEMS = [
-  "تصوير",
-  "مونتاج",
-  "تصميم جرافيك",
-  "كتابة محتوى",
-  "ادارة وسائل التواصل",
-
+  "photography",
+  "editing",
+  "graphicDesign",
+  "contentWriting",
+  "socialMedia",
 ];
-
 
 export default function Herosection() {
   const { i18n } = useTranslation();
   const isRTL = i18n.dir() === "rtl";
-  //const { t } = useTranslation();
+  const { t } = useTranslation();
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0.6]);
 
   const stripContent = [...STRIP_ITEMS, ...STRIP_ITEMS, ...STRIP_ITEMS, ...STRIP_ITEMS, ...STRIP_ITEMS, ...STRIP_ITEMS]
     .map((item, i) => (
       <span key={i} className="flex items-center gap-4 font-bold">
-        <span className="text-4xl">{item}</span>
+        <span className="text-4xl">{t(item)}</span>
         <span className="text-white/50 text-3xl">◆</span>
       </span>
     ));
@@ -41,14 +39,14 @@ export default function Herosection() {
       >
         
         <h1 className="text-yellow-50 text-6xl md:text-7xl font-black leading-tight mb-10">
-          <span className="">مــن فــكــرة تُبـنـــى </span>
+          <span className="">{t("heroTitle")}</span>
           <br />
-          <span className="">إلــى مــحـتــوى  </span>
+          <span className="">{t("heroSubtitle")}</span>
 
         
       
   <span className="relative inline-block">
-    يُحــكــى  
+    {t("heroButton")}
 
     <svg
       viewBox="0 0 200 100"

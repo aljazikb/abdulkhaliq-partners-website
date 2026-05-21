@@ -3,11 +3,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
 
 import IMG_4402 from "../assets/IMG_4402.png";
-
 import IMG_4403 from "../assets/IMG_4403.png";
-
 import IMG_4401 from "../assets/IMG_4401.png";
-
 import IMG_4404 from "../assets/IMG_4404.png";
 
 const VIDEOS = [

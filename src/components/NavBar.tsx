@@ -4,8 +4,7 @@ import { RiCloseLargeFill } from "react-icons/ri";
 import { useTranslation } from "react-i18next";
 import { FaGlobe } from "react-icons/fa";
 import i18n from "../i18n";
-import logo from "../assets/MAVNT.png";
-
+import logo from "../assets/Asset 4.png";
 
 
 
@@ -126,7 +125,7 @@ export default function NavBar() {
 
           {/*                    */}
           {isOpenGlobe && (
-            <div className="fixed top-16 right-4 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2 z-999">
+           <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 bg-white shadow-lg rounded-md p-2 flex flex-col gap-2 z-[9999]">
               <button
                 onClick={() => changeLanguage("en")}
                 className="px-3 py-1  text-black hover:bg-gray-300 rounded"

@@ -1,16 +1,20 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons'
 import { motion } from "motion/react"
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+   const { t } = useTranslation();
+  
   return (
+
     <section
       className="bg-[#45A7AA] min-h-[480px] flex flex-col items-center justify-center py-20 px-8 text-center"
       dir="rtl"
       id="contact">
 
       <h2 className="text-yellow-50 text-6xl leading-tight mb-1">
-        جــاهــز تـكســر الــروتـيـن؟
+        {t("contactSubtitle")}
       </h2>
 
 
@@ -22,7 +26,7 @@ export default function Contact() {
       >
 
         <h2 className="text-[#25D366] text-6xl leading-tight flex items-center gap-4 relative drop-shadow-lg">
-          خلـنـا نـبـدأ
+          {t("contactButton")}
         </h2>
 
 

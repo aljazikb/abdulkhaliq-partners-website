@@ -4,60 +4,63 @@
   "services": "Services",
   "portfolio": "Portfolio",
   "contact": "Contact",
-  "heroTitle": "We create. You grow.",
-  "heroSubtitle": "Photo, video editing, and social media content for modern brands",
-  "heroButton": "Get Started",
-  "aboutSubtitle": "We are a creative agency specializing in photography, marketing, and content writing. We help you showcase your identity and build a strong and distinctive presence. We offer innovative solutions that combine quality and impact to deliver your message to your audience in the best way possible.",
-  "servicesDescription": "Everything you need to bring your vision to life",
+
+  "heroTitle": "From an Idea Built To Content",
+  "heroSubtitle":"That Tells a ",
+  "heroButton":"Story",
+
+  
+  "photography": "Photography",
+  "editing": "Video Editing",
+  "graphicDesign": "Graphic Design",
+  "contentWriting": "Content Writing",
+  "socialMedia": "Social Media Management",
+
+
+
+  
+  "creativeContent": "Produced over 71 creative content pieces",
+  "professionalVideos": "Filmed more than 100 professional videos",
+  "accountManagement": "5 years of experience in account management and growth",
+  "marketingCampaigns": "Successfully launched 50+ marketing campaigns",
+  "higherViews": "Helped clients achieve 150% higher views",
+
+  
+  "aboutSubtitle": "We are more than just a marketing platform — we are your destination for building a unique and impactful presence.",
+  "aboutSubtitle2": "We provide professional services in photography, marketing, and content creation to help you showcase your identity and connect with your audience in a way that attracts and inspires.",
+  "aboutSubtitle3": "We always strive to combine creativity with quality to deliver a complete experience that reflects the strength of your brand.",
 
   "webDevelopmentTitle": "Digital Marketing",
-  "webDevelopmentDescription": "Helping your brand reach the right audience and grow its online presence effectively.",
+  "webDevelopmentDescription": "We help you reach your target audience and grow your brand presence online.",
 
   "uiUxDesignTitle": "Creative Design",
-  "uiUxDesignDescription": "Designing engaging visual content and social media posts that reflect your brand identity.",
+  "uiUxDesignDescription": "Professional visual content and social media designs that reflect your brand identity.",
 
   "mobileAppsTitle": "Professional Photography",
-  "mobileAppsDescription": "High-quality photography for products, events, and marketing content.",
+  "mobileAppsDescription": "High-quality photography for products and events tailored for ads and social media.",
 
   "cloudSolutionsTitle": "Video Editing & Production",
-  "cloudSolutionsDescription": "Professional video editing and visual content creation to attract and engage customers.",
+  "cloudSolutionsDescription": "Professional video editing and visual content creation that captures attention.",
 
   "seoMarketingTitle": "Advertising Campaigns",
-  "seoMarketingDescription": "Managing paid advertising campaigns across social media platforms to increase reach and sales.",
+  "seoMarketingDescription": "Managing paid advertising campaigns on social media platforms to increase customers and sales.",
 
   "aiIntegrationTitle": "Content Strategy",
-  "aiIntegrationDescription": "Planning and creating creative content strategies to grow your brand effectively.",
+  "aiIntegrationDescription": "Planning and creating creative content strategies that support brand growth.",
 
-  "project1Title": "Project 1",
-  "project2Title": "Project 2",
-  "project3Title": "Project 3",
-  "project4Title": "Project 4",
-  "project5Title": "Project 5",
-  "project6Title": "Project 6",
-  "project7Title": "Project 7",
-  "project8Title": "Project 8",
-  "project9Title": "Project 9",
-  "portfolioDescription": "Our work speaks for itself",
-  "all": "All",
-  "realEstate": "Real Estate",
-  "cars": "Cars",
-  "halls": "Halls",
-    
 
+
+  "contactSubtitle": "?Ready to break the routine",
+  "contactButton": "Let's Talk",
   "footerTagline": "We create bold, purposeful, and enduring digital experiences",
+
   "footerLocation": "Location",
   "footerFollow": "Follow Us",
   "footerCity": "Jeddah, Saudi Arabia",
   "footerEmail": "hello@mavnt.com",
-
-  
+  "footerDeveloped": "Developed by",
 
   "viewProject": "View Project",
   "close": "Close",
   "contactUs": "Contact Us"
-
-
-
-
-
 }

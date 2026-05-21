@@ -1,15 +1,27 @@
-import { defineConfig } from 'vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import babel from '@rolldown/plugin-babel'
-import tailwindcss from '@tailwindcss/vite'
+
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+//import obfuscator from "vite-plugin-javascript-obfuscator";
 
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    babel({ presets: [reactCompilerPreset()] }),
     tailwindcss(),
+    /*
+     obfuscator({
+      options: {
+        compact: true,
+        controlFlowFlattening: true,
+        stringArray: true,
+      },
+    })*/
   ],
   base: "/abdulkhaliq-partners-website/",
-})
+  build: {
+    sourcemap: false,
+  },
+
+   
+});

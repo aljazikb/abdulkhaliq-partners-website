@@ -1,16 +1,20 @@
+import { useTranslation } from "react-i18next";
+
 const WORDS = [
-  "تم إنتاج أكثر من 71 محتوى إبداعي",
-  "تم تصوير أكثر من 100 مقطع احترافي",
-  "تم إدارة أكثر من 10 حسابات بنجاح",
-  "أكثر من 50 حملة تسويقية ناجحه",
-  "مشاهدات أعلى لعملائنا بنسبة %150"
+  "creativeContent",
+  "professionalVideos",
+  "accountManagement",
+  "marketingCampaigns",
+  "higherViews"
 ];
 
+
 export default function Aboutword() {
+  const { t } = useTranslation();
   const row = [...WORDS].map((item, i) => (
     <span key={i} className="flex items-center gap-6 whitespace-nowrap">
       <h2 className="text-3xl md:text-5xl text-yellow-50 ">
-        {item}
+        {t(item)}
       </h2>
       <h1 className="text-white/30 text-6xl">•</h1>
     </span>
